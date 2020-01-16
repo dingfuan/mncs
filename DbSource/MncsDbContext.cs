@@ -22,7 +22,7 @@ namespace mncs.DbSource
             Database.SetInitializer(new SqliteCreateDatabaseIfNotExists<MncsDbContext>(modelBuilder));
         }
 
-        public DbSet<Programmer> Programmers { get { return Set<Programmer>(); } }
-        public DbSet<ProjectManager> ProjectManagers { get { return Set<ProjectManager>(); } }
+        public DbSet<Programmer> Programmers { get; set; }
+        public DbSet<ProjectManager> ProjectManagers { get; set; }
     }
 }
